@@ -1,0 +1,16 @@
+// print largest among three number using shorting
+import java.io.*;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int[] V = {11,65,193,36,209,664,32};
+		Arrays.sort(V);
+		int x = V.length;
+		System.out.println("First = "+(x-2));
+		System.out.println("FIrst = "+V[x-1]);
+		System.out.println("Second = "+V[x-2]);
+		System.out.println("THird = "+V[x-3]);
+		
+	}
+}
