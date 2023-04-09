@@ -1,0 +1,44 @@
+// Search an element in a linklist
+class Node{
+  constructor(d) {
+    this.data = d;
+    this.next = null
+  }
+}
+// linklist class
+var head;
+
+function push(new_data)
+    {
+        // Allocate new node and putting data
+        var new_node = new Node(new_data);
+ 
+        // Make next of new node as head
+        new_node.next = head;
+ 
+        // Move the head to point to new Node
+        head = new_node;
+    }
+
+ function search( head , x)
+    {
+        var current = head; // Initialize current
+        while (current != null) {
+            if (current.data == x)
+                return true; // data found
+            current = current.next;
+        }
+        return false; // data not found
+    }
+
+push(10)
+push(30)
+push(11);
+push(21);
+push(21);
+push(14);
+var x = 10;
+if(search(head,x))
+  console.log('yes')
+else
+  console.log('NO')
